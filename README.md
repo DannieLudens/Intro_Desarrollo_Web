@@ -7,7 +7,9 @@
 **Portafolio Web Personal**
 
 **Por:** Daniel Esteban Ardila Alzate 
+
 **Para la materia:** introducción al desarrollo web
+
 **Dictada por:** Andrés Felipe Diaz González
 
 ### Objetivo general
