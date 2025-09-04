@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SandBox SoloLearnAprendizaje</title>
+    </head>
+    <body>
+        <h1>Aprendizaje de HTML con SoloLearn</h1>
+        <p>Este es un párrafo de ejemplo</p>
+        <ol>
+            <li>frutas</li>
+            <ul>
+                <li>manzana</li>
+                <li>pera</li>
+                <li>naranja</li>
+            </ul>
+            <li>Leche</li>
+            <li>Queso</li>
+        </ol>
+
+        <!--el navegador web ignorará los saltos de línea y los espacios en blanco-->
+        <p>Some text</p><p>More text</p>
+          <p>Additional text</p>
+        <!--Cada elemento de la lista se mostrará en una nueva linea-->
+        <ul><li>A</li><li>B</li></ul>
+        <!--3 elementos de lista ordenada, 3 lineas-->
+        <ol>
+            <li>Item1</li><li>Item2</li>
+            <li>Item3</li>
+        </ol>
+        <!--alt un atributo para que la pagina sea mas accesible-->
+        <img src="https://blob.sololearn.com/courses/shore.jpg" alt="SoloLearn Logo">
+        <!--width un atributo opcional para controlar el tamano de imagen-->
+        <img src="https://blob.sololearn.com/courses/shore.jpg" width="300">
+        <!--height un atributo opcional para controlar la altura de la imagen-->
+        <img src="https://blob.sololearn.com/courses/shore.jpg" height="100">
+        <!--width y height juntos-->
+        <img src="https://blob.sololearn.com/courses/shore.jpg" width="800" height="100">
+
+        <!--Diferentes secciones/paginas en una sola pagina-->
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="about.html">Acerca de</a>
+            <a href="contact.html">Contacto</a>
+        </nav>
+        <p>Ahora vamos a ver como seria en una sola pagina</p>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#packages">Packages</a>
+        </nav>
+        <h2>Discover the world with us!</h2>
+        <p>At <b>Around the world</b>, we
+            believe that travel is one of
+            the greatest gifts life has to
+            offer. That's why we're
+            dedicated to making your journeys
+            as seamless and enjoyable as
+            possible.
+            Whether you're seeking adventure,
+            relaxation, or a combination of
+            both, we've got you covered.
+            With a wide range of destinations
+            and customizable travel packages,
+            you'11 be able to create the trip
+            of a lifetime.
+            </p>
+            <p>Our team of experienced travel
+            consultants are passionate about
+            travel and will work with you
+            to design an itinerary that fits
+            your individual needs and budget.
+            So why wait? Book your next adventure
+            with <b>Around the world</b> today
+            and start creating memories that
+            will last a lifetime!
+            </p>
+            <h2 id="about">About us</h2>
+            <p>At <b>Around the world</b>, we are
+            a team of passionate travelers
+            dedicated to helping our clients
+            experience the world. With years of
+            experience in the travel industry,
+            our knowledgeable and experienced
+            staff will work with you to plan and
+            book your next journey.
+            </p>
+            <h2 id="packages">Packages</h2>
+            <ul>
+            <li>Adults</li>
+            <li>School groups</li>
+            <li>Students</li>
+            <li>Family</li>
+            <li>Corporate</li>
+            <li>Honeymoon</li>
+            </ul>
+            <a href="#top">Top of the page</a>
+            
+            <br><br><br><h3>Formularios</h3><br><br>
+            <!--Formularios-->
+            <!--El elemento de formulario mas comun es <input>-->
+            <form>
+                <input type="text">
+                <input type="radio">
+                <input type="checkbox">
+                <!--<br> mostrara cada elemento en una nueva linea-->
+                <br><br>
+                <input type="text"><br>
+                <input type="radio"><br>
+                <input type="checkbox"><br>
+                <!--<label>Texto de la etiqueta</label>-->
+                <br><br>
+                <label>Enter text:</label>
+                <input type="text"><br>
+                <label>Select the radio button:</label>
+                <input type="radio"><br>
+                <label>Check the box:</label>
+                <input type="checkbox"><br>
+                <!--Se considera buena practica conectar las etiquetas con sus elementos de formulario con los atributos for e id-->
+                <p>Notification preferences :</p>
+                <input type="checkbox" id="box1">
+                <label for="box1">
+                Email</label>
+                <input type="checkbox" id="box2">
+                <label for="box2">
+                Push</label>
+                
+                <br><br><br>
+                
+                <p>Select your topics of interest:</p>
+
+                <input type="checkbox" id="c1">
+                <label for="c1">Art</label><br>
+                <input type="checkbox" id="c2">
+                <label for="c2">Sports</label><br>
+                <input type="checkbox" id="c3">
+                <label for="c3">Tech</label><br>
+
+                <p>Enter payment option</p>
+                <input type="radio" id="r1" name="pay" value="cash">
+                <label for="r1">Cash</label><br>
+                <input type="radio" id="r2" name="pay" value="card">
+                <label for="r2">Credit Card</label><br>
+
+                <br><br>
+                <label for="t1">Email:</label>
+                <input type="text" id="t1" name="email" value="example@domain.com">
+            </form>
+    </body>
+</html>
