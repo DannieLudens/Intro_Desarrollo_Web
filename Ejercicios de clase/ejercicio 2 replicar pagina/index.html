@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <!-- Codificación del documento -->
   <meta charset="UTF-8" />
+  <!-- Para que el ancho se adapte al dispositivo (responsivo) -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Daniel Esteban Ardila Alzate</title>
 
-  <!-- Fuente y estilos -->
+  <!-- Precargas para optimizar la descarga de la fuente -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Fuente Inter desde Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <!-- Hoja de estilos principal del proyecto -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Barra superior -->
+  <!-- Encabezado del sitio con marca y navegación -->
   <header class="site-header">
+    <!-- Bloque de marca: logotipo + nombre -->
     <div class="brand">
       <img src="logo.png" alt="Logo SoloLearn" width="36" height="36" />
       <h1>SoloLearn</h1>
     </div>
+
+    <!-- Menú principal (enlaces de navegación) -->
     <nav class="main-nav">
       <ul>
         <li><a href="Curso.html">Cursos</a></li>
@@ -30,36 +37,66 @@
   </header>
 
   <main>
-    <!-- Hero oscuro con perfil y promo -->
+    <!-- Sección “hero” como banda oscura de la cabecera del perfil -->
     <section class="hero">
+      <!-- Cabecera del perfil: avatar + nombre + métricas -->
       <div class="profile-header">
         <img src="profile.png" alt="Foto de perfil" />
         <div>
           <h2>Daniel Esteban Ardila Alzate</h2>
 
+          <!-- Métricas en línea (se estilizan como fila con flex) -->
           <ul class="stats">
             <li><strong>1</strong> Siguiendo</li>
             <li><strong>2</strong> Seguidores</li>
             <li class="xp"><strong>678</strong> XP</li>
           </ul>
 
+          <!-- Datos adicionales del perfil -->
           <p class="meta">Colombia • Nivel 5</p>
         </div>
       </div>
 
-      <aside class="promo">
-        <img src="publicidad.gif" alt="Publicidad" />
-        <div class="badge">sololearn <strong>PRO</strong></div>
+      <!-- Banner de promoción:
+           - La imagen GIF actúa como “fondo”
+           - El texto/badge a la izquierda y el botón a la derecha
+           - Se posicionan con absolute sobre la imagen -->
+      <aside class="promo promo-overlay">
+        <!-- Imagen de fondo del banner -->
+        <img class="promo-bg" src="publicidad.gif" alt="Publicidad" />
+        <!-- Lado izquierdo: marca + distintivo PRO -->
+        <div class="promo-left">
+          <span class="promo-brand">sololearn</span>
+          <span class="pro-badge">PRO</span>
+        </div>
+        <!-- Lado derecho: llamada a la acción -->
         <button class="cta">Empieza Hoy</button>
       </aside>
     </section>
 
-    <!-- Tarjetas de ejemplo (opcional, para ver el estilo de cards) -->
+    <!-- Sección de tarjetas de contenido inferior -->
     <section class="cards">
-      <article class="card">
+      <!-- Tarjeta de racha: lista de días con círculo arriba y letra abajo -->
+      <article class="card streak">
         <h3>Racha</h3>
-        <p>Racha actual: 3 días • Más larga: 5 días</p>
+
+        <!-- Cada <li> representa un día:
+             - .on = día cumplido (verde)
+             - .miss = día perdido (naranja)
+             - .dot = círculo
+             - .label = inicial del día debajo -->
+        <ul class="streak-days">
+          <li class="on"><span class="dot"></span><span class="label">L</span></li>
+          <li class="on"><span class="dot"></span><span class="label">M</span></li>
+          <li class="on"><span class="dot"></span><span class="label">M</span></li>
+          <li class="miss"><span class="dot"></span><span class="label">J</span></li>
+          <li><span class="dot"></span><span class="label">V</span></li>
+          <li><span class="dot"></span><span class="label">S</span></li>
+          <li><span class="dot"></span><span class="label">D</span></li>
+        </ul>
       </article>
+
+      <!-- Tarjeta de ejemplo de progreso de cursos -->
       <article class="card">
         <h3>Progreso de los cursos</h3>
         <ul class="list">
@@ -71,6 +108,7 @@
     </section>
   </main>
 
+  <!-- Pie de página del sitio -->
   <footer class="site-footer">
     <p>Hecho por SoloLearn ©2025</p>
   </footer>
