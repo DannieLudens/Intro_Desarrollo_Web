@@ -1,6 +1,3 @@
-/* ===========================
-   Variables y reset básico
-   =========================== */
 :root{ /*: es para definir variables CSS y root es el contenedor principal para todas las variables */
   /* Paleta de colores reutilizable (CSS variables) */
   --bg:#eef2f6;       /* fondo general gris claro */
@@ -53,10 +50,19 @@ body{
   border-radius:0 0 14px 14px; /* esquinas redondeadas abajo */
 }
 
-.brand{ display:flex; align-items:center; gap:10px } /* logo + texto */
+.brand{  /* logo + texto */
+  display:flex; 
+  align-items:center; 
+  gap:10px 
+}
 .brand h1{ font-size:1.25rem }
 
-.main-nav ul{ display:flex; list-style:none; gap:10px } /* navegación principal list-style en none hace que los elementos de la lista se muestren en línea */
+.main-nav ul{ 
+  display:flex; 
+  list-style:none; 
+  gap:10px 
+} /* navegación principal list-style en none hace que los elementos de la lista se muestren en línea */
+
 .main-nav a{
   text-decoration:none; color:inherit; /* elimina subrayado y usa color del texto */
   padding:8px 10px; border-radius:8px;
@@ -76,22 +82,40 @@ body{
 }
 
 /* Cabecera de perfil dentro del hero */
-.profile-header{
-  /* Sin tarjeta: solo contenido sobre el hero */
-  background:transparent; color:#fff; border-radius:0; padding:0;
-  display:flex; align-items:center; gap:16px;
-  box-shadow:none; margin-bottom:14px;
+.profile-header{ /* contenido sobre el hero */
+  background:transparent; 
+  color:#fff; 
+  border-radius:0; 
+  padding:0;
+  display:flex; 
+  align-items:center; 
+  gap:16px;
+  box-shadow:none; 
+  margin-bottom:14px;
 }
 
 .profile-header img{
   /* Avatar circular */
-  width:88px; height:88px; object-fit:cover; border-radius:50%;
-  border:3px solid rgba(255,255,255,.25); background:#334155;
+  width:88px; 
+  height:88px; 
+  object-fit:cover; 
+  border-radius:50%;
+  border:3px solid rgba(255,255,255,.25); 
+  background:#334155;
 }
-.profile-header h2{ font-size:1.3rem; margin-bottom:6px }
+.profile-header h2{ 
+  font-size:1.3rem; 
+  margin-bottom:6px 
+}
 
 /* Métricas alineadas en fila */
-.stats{ list-style:none; display:flex; gap:14px; font-size:.95rem; margin:6px 0 }
+.stats{ 
+  list-style:none; 
+  display:flex; 
+  gap:14px; 
+  font-size:.95rem; 
+  margin:6px 0 
+}
 .stats .xp{ color:#fde68a } /* resalta el XP en amarillo */
 .meta{ color:#cbd5e1; font-size:.95rem }
 
@@ -102,39 +126,73 @@ body{
    - Contenido (texto/badge/botón) se coloca con absolute
    =========================== */
 .promo{
-  background:transparent; border:0; border-radius:12px; padding:0;
-  text-align:left; align-self:auto; box-shadow:none;
+  background:transparent; 
+  border:0; 
+  border-radius:12px; 
+  padding:0;
+  text-align:left; 
+  align-self:auto; 
+  box-shadow:none;
 }
-.promo-overlay{ position:relative; height:72px; overflow:hidden }
+.promo-overlay{ 
+  position:relative; 
+  height:72px; 
+  overflow:hidden 
+}
 .promo-bg{
-  position:absolute; inset:0;              /* ocupa todo el contenedor */
-  width:100%; height:100%; object-fit:cover;
-  filter:saturate(.9) brightness(.85);     /* ajusta color y brillo */
+  position:absolute; 
+  inset:0; /* ocupa todo el contenedor */
+  width:100%; 
+  height:100%; 
+  object-fit:cover;
+  filter:saturate(.9) brightness(.85); /* ajusta color y brillo */
   border-radius:12px;
 }
 /* Capa oscura por encima del GIF para contraste */
 .promo-overlay::before{
-  content:""; position:absolute; inset:0;
-  background:rgba(9,13,23,.45); border-radius:12px;
+  content:""; 
+  position:absolute; 
+  inset:0;
+  background:rgba(9,13,23,.45); 
+  border-radius:12px;
 }
 /* Lado izquierdo del banner: marca + badge */
 .promo-left{
-  position:absolute; left:14px; top:50%; transform:translateY(-50%);
-  display:inline-flex; gap:8px; align-items:center;
-  color:#fff; font-weight:700; letter-spacing:.2px;
+  position:absolute; 
+  left:14px; 
+  top:50%; 
+  transform:translateY(-50%);
+  display:inline-flex; 
+  gap:8px; 
+  align-items:center;
+  color:#fff; 
+  font-weight:700; 
+  letter-spacing:.2px;
 }
 .promo-brand{ text-transform:lowercase; opacity:.95 }
 /* Badge PRO como pastilla con esquinas redondeadas */
 .pro-badge{
-  background:var(--primary); color:#111827;
-  padding:3px 8px; border-radius:8px;
-  font-weight:800; font-size:.9rem; line-height:1;
+  background:var(--primary); 
+  color:#111827;
+  padding:3px 8px; 
+  border-radius:8px;
+  font-weight:800; 
+  font-size:.9rem; 
+  line-height:1;
 }
 /* Botón del lado derecho */
 .cta{
-  position:absolute; right:14px; top:50%; transform:translateY(-50%);
-  background:var(--primary); color:#111827; font-weight:800;
-  border:0; padding:10px 14px; border-radius:10px; cursor:pointer;
+  position:absolute; 
+  right:14px; 
+  top:50%; 
+  transform:translateY(-50%);
+  background:var(--primary); 
+  color:#111827; 
+  font-weight:800;
+  border:0; 
+  padding:10px 14px; 
+  border-radius:10px; 
+  cursor:pointer;
 }
 .cta:hover{ filter:brightness(.95) } /* leve oscurecido al hover */
 
@@ -143,29 +201,53 @@ body{
    =========================== */
 .cards{
   margin-top:20px;
-  display:grid; grid-template-columns:1fr 1fr; gap:18px; /* dos columnas */
+  display:grid; 
+  grid-template-columns:1fr 1fr; 
+  gap:18px; /* dos columnas */
 }
 .card{
-  background:var(--surface); border:1px solid var(--border);
-  border-radius:14px; padding:16px;
+  background:var(--surface); 
+  border:1px solid var(--border);
+  border-radius:14px; 
+  padding:16px;
   box-shadow:0 6px 12px rgba(2,6,23,.06);
 }
-.card h3{ margin-bottom:10px; font-size:1.05rem }
+.card h3{ 
+  margin-bottom:10px; 
+  font-size:1.05rem 
+}
+.list {
+  list-style: none;   /* Elimina el marcador de la lista */
+  padding-left: 0;    /* Elimina el espacio izquierdo */
+}
 
 /* ===========================
    Racha (streak)
    - Fila de días. Cada día es una columna: círculo + letra
    - Estados: .on (verde), .miss (naranja)
    =========================== */
-.streak-days{ display:flex; gap:14px; list-style:none }
+.streak-days{ 
+  display:flex; 
+  gap:14px; 
+  list-style:none 
+}
 .streak-days li{
-  display:flex; flex-direction:column; align-items:center; gap:6px;
-  font-size:.8rem; color:var(--muted);
+  display:flex; 
+  flex-direction:column; 
+  align-items:center; 
+  gap:6px;
+  font-size:.8rem; 
+  color:var(--muted);
 }
 .streak-days .dot{
-  width:28px; height:28px; border-radius:50%;
-  background:#e5e7eb; border:2px solid #e5e7eb; display:block;
+  width:28px; 
+  height:28px; 
+  border-radius:50%;
+  background:#e5e7eb; 
+  border:2px solid #e5e7eb; 
+  display:block;
 }
+
 .streak-days li.on  .dot{ background:#22c55e; border-color:#22c55e }
 .streak-days li.miss .dot{ background:#f59e0b; border-color:#f59e0b }
 .streak-days .label{ line-height:1 } /* letra pegada al círculo */
@@ -184,4 +266,14 @@ body{
   .profile-header{ flex-direction:column; align-items:flex-start }
   /* Un poco más alto el banner en móvil */
   .promo-overlay{ height:84px }
+}
+
+/* Footer oscuro */
+.site-footer {
+  background: #23272f;      /* gris muy oscuro */
+  color: #cbd5e1;           /* texto gris claro */
+  text-align: center;
+  font-size: .95rem;
+  padding-block: 18px;
+  border-top: 1px solid var(--border);
 }
